@@ -2,5 +2,5 @@
 
 int main()
 {
-    printf("Git makes every change traceable.\n");
+    printf("Main branch: Git records each revision.\n");
 }
