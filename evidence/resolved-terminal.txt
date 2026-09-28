@@ -1,0 +1,30 @@
+$ git status --short main.c
+
+$ git ls-files -u
+
+$ git log --graph --oneline --decorate --all -5
+*   69402a8 (HEAD -> main, origin/main, origin/HEAD) merge: resolve main and feature message conflict
+|\  
+| * d44758c (origin/feature, feature) feat: revise message on feature branch
+* | 7bb27c8 feat: revise message on main branch
+|/  
+* 1664787 feat: complete the main.c TODO
+* 1c79304 Initial commit
+
+$ cat main.c
+#include <stdio.h>
+
+int main()
+{
+    printf("Git records revisions and supports teamwork.\n");
+}
+
+$ make
+gcc -Wall -O2 -c main.c -o main.o
+gcc -Wall -O2 -o main main.o
+
+$ ./main
+Git records revisions and supports teamwork.
+
+$ make clean
+rm -f main.o main

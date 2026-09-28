@@ -1,0 +1,19 @@
+$ git merge feature
+Auto-merging main.c
+CONFLICT (content): Merge conflict in main.c
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git status --short
+UU main.c
+
+$ cat main.c
+#include <stdio.h>
+
+int main()
+{
+<<<<<<< HEAD
+    printf("Main branch: Git records each revision.\n");
+=======
+    printf("Feature branch: Git supports teamwork.\n");
+>>>>>>> feature
+}
